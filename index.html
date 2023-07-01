@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+  <title>landingPage</title>
+</head>
+<body>
+  <section class="home">
+  <nav class="navbar">
+    <img src=""class="logo">
+    <div class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hideMenu()"></i>
+
+      <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="abouttpage/about.html">ABOUT</a></li>
+          <li><a href="page/contactus.html">CONTACT</a></li>
+          <li></li>
+          
+
+      </ul>
+  </div>
+  <i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+    </nav>
+    <div class="row">
+      <div class="col">
+        <h1>Capture Moments</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Nostrum.</p>
+          <a href="" class="hero-btn">GALLERY</a>
+      </div>
+      <div class="col">
+        <div class="card card1">
+        </div>
+        <div class="card card2"></div>
+        <div class="card card3"></div>
+        <div class="card card4"></div>
+      </div>
+      
+    </div>
+      </section>
+
+      <section class="filter-gallery">
+        <div class="portfolio-menu">
+          <ul>
+            <li class="active"date-filter="*">ALL</li>
+            <li data-filter=".Wedding">Wedding</li>
+            <li data-filter=".Birthday">Birthday</li>
+            <li data-filter=".Modelling">Modelling</li>
+            
+
+          </ul>
+        </div>
+        <div class="portfolio-item">
+          <div class="item Wedding">
+          <img src="img/wedding1.jpg" width="100" height="100">
+        </div>
+        <div class="item Birthday">
+          <img src="img/birthday1.jpg" width="100" height="100">
+        </div>
+        <div class="item Modelling">
+          <img src="img/modeling1.jpg" width="100" height="100">
+        </div>
+        <div class="item Wedding">
+          <img src="img/wedding3.jpg" width="100" height="100">
+        </div>
+        <div class="item Birthday">
+          <img src="img/birthday2.jpg" width="100" height="100">
+        </div>
+        <div class="item Modelling">
+          <img src="img/modeling4.jpg" width="100" height="100">
+        </div>
+        <div class="item Wedding">
+          <img src="img/wedding2.jpg" width="100" height="100">
+        </div>
+        <div class="item Birthday">
+          <img src="img/birthday.jpg" width="100" height="100">
+        </div>
+        <div class="item Modelling">
+          <img src="img/modeling3.jpg" width="100" height="100">
+        </div>
+      </div>
+
+      </section>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js">
+    </script>
+    <script type="text/javascript">
+      $('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+
+$('.portfolio-menu ul li').click(function(){
+  $('.portfolio-menu ul li').removeClass('active');
+  $(this).addClass('active');
+
+      var selector = $(this).attr('data-filter');
+      $('.portfolio-item').isotope({
+        filter:selector
+      });
+      return false;
+});
+
+    </script>
+
+    <section class="footer">
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>Joshi<span>ArtStudio</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+                |
+                <a href="#">gallary</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>JoshiArtStudio</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Ghaziabad</span>
+                    Delhi</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 74**9**258</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>JoshiArtStudio</strong> is a photography website where you can find more photoshoot option
+                and
+                Effects along with.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    </section>
+
+</body>
+</html>
